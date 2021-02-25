@@ -34,18 +34,18 @@ extension ConfiguratorView {
 
 extension Container {
     
-    func configure<Configurator>(assembly: Configurator.Type) where Configurator: ConfiguratorType {
+    public func configure<Configurator>(assembly: Configurator.Type) where Configurator: ConfiguratorType {
         let configurator = Configurator()
         configurator.assemble(container: self)
     }
     
-    func configure<Configurator>(assembly: Configurator.Type) -> Configurator where Configurator: ConfiguratorType {
+    public func configure<Configurator>(assembly: Configurator.Type) -> Configurator where Configurator: ConfiguratorType {
         let configurator = Configurator()
         configurator.assemble(container: self)
         return configurator
     }
     
-    func configure<Configurator>(assembly: Configurator.Type) -> UIViewController where Configurator: ConfiguratorType {
+    public func configure<Configurator>(assembly: Configurator.Type) -> UIViewController where Configurator: ConfiguratorType {
         let configurator = Configurator()
         configurator.assemble(container: self)
         return configurator.getView()
