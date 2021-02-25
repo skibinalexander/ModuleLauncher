@@ -55,7 +55,7 @@ extension Container {
 
 extension Container {
     
-    func resolveAsViewController<Service>(_ serviceType: Service.Type) -> UIViewController {
+    public func resolveAsViewController<Service>(_ serviceType: Service.Type) -> UIViewController {
         guard let vc = self.resolve(serviceType) as? UIViewController else {
             fatalError("Can't cast \(serviceType) to UIViewController")
         }
