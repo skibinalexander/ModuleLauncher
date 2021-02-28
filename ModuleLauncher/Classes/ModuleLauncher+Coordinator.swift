@@ -29,10 +29,10 @@ public protocol ConfiguratorCoordinator {
         in container: Container)
     
     /// Переход к Root контроллера в стеке
-    func popToRoot(view: UIViewController)
+    func popToRoot(from navigationView: UINavigationController?)
     
     /// Скрыть контроллер из стека
-    func pop(view: UIViewController)
+    func pop(from navigationView: UINavigationController?)
     
     /// Удаление контроллера из стека навигации
     /// - Parameters:
