@@ -74,6 +74,40 @@ public protocol ConfiguratorCoordinator {
     
 }
 
+public extension ConfiguratorCoordinator {
+    func push(
+        presentView: UIViewController,
+        on navigationView: UINavigationController?,
+        in container: Container) {}
+    
+    func popToRoot(from navigationView: UINavigationController?) {}
+    
+    func pop(from navigationView: UINavigationController?) {}
+    
+    func removeViewFromStack(
+        at index: Int,
+        from navigationView: UINavigationController?) {}
+    
+    func removeViewFromStack(
+        with range: Range<Int>,
+        from navigationView: UINavigationController?) {}
+    
+    // MARK: - Modal Stack
+
+    func present(
+        view: UIViewController,
+        on controller: UIViewController,
+        in container: Container) {}
+    
+    func dissmis(view: UIViewController) {}
+    
+    // MARK: - Custom
+    
+    func present(custom: CoordinatorCustomPresentation) {}
+
+    func dissmis(custom: CoordinatorCustomPresentation) {}
+}
+
 // MARK: - Route Modules
 
 /// Абстракция реализации кастомной координации модулей

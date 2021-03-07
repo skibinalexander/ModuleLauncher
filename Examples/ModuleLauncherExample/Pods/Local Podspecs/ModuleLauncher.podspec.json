@@ -1,0 +1,29 @@
+{
+  "name": "ModuleLauncher",
+  "version": "0.1.0",
+  "summary": "Abstraction of initialization modules with Swinject DI",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/skibinalexander/ModuleLauncher.git",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Skibin Alexander": "skibinalexander@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/skibinalexander/ModuleLauncher.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "11.0"
+  },
+  "swift_versions": "5.0",
+  "source_files": "ModuleLauncher/Classes/**/*",
+  "dependencies": {
+    "Swinject": [
+
+    ]
+  },
+  "swift_version": "5.0"
+}
