@@ -17,7 +17,12 @@ final class InitialInteractor: InitialInteractorProtocol {
     // MARK: - Interactor Implementation
     
     func initialization() {
-        print(service.fetchExample())
+        presenter.didLoad(
+            namesString:
+                service
+                .fetchExample()
+                .joined(separator: " ")
+        )
     }
     
 }

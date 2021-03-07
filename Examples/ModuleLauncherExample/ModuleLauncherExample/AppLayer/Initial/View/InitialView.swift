@@ -40,6 +40,12 @@ final class InitialView: UIViewController, InitialViewProtocol {
         setupInitialState()
         presenter.viewDidLoad()
     }
+    
+    // MARK: - Protocol Implementation
+    
+    func set(names: String) {
+        label.text = names
+    }
 
     // MARK: - Private Methods
 

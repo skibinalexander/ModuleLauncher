@@ -28,5 +28,7 @@ final class InitialPresenter: InitialPresenterFromViewProtocol {
 // MARK: - InitialPresenterFromInteractorProtocol Implementation
 
 extension InitialPresenter: InitialPresenterFromInteractorProtocol {
-    
+    func didLoad(namesString: String) {
+        view.set(names: namesString)
+    }
 }

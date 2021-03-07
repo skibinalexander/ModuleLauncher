@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2D9D0BAE25F4FD7F004814AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9D0BAD25F4FD7F004814AB /* AppDelegate.swift */; };
-		2D9D0BB025F4FD7F004814AB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9D0BAF25F4FD7F004814AB /* SceneDelegate.swift */; };
 		2D9D0BB725F4FD80004814AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D9D0BB625F4FD80004814AB /* Assets.xcassets */; };
 		2D9D0BBA25F4FD80004814AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D9D0BB825F4FD80004814AB /* LaunchScreen.storyboard */; };
 		2D9D0BD625F4FFA7004814AB /* FeatureDependeciesFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9D0BD525F4FFA7004814AB /* FeatureDependeciesFactory.swift */; };
@@ -33,7 +32,6 @@
 /* Begin PBXFileReference section */
 		2D9D0BAA25F4FD7F004814AB /* ModuleLauncherExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ModuleLauncherExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D9D0BAD25F4FD7F004814AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2D9D0BAF25F4FD7F004814AB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		2D9D0BB625F4FD80004814AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2D9D0BB925F4FD80004814AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2D9D0BBB25F4FD80004814AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -131,7 +129,6 @@
 			isa = PBXGroup;
 			children = (
 				2D9D0BAD25F4FD7F004814AB /* AppDelegate.swift */,
-				2D9D0BAF25F4FD7F004814AB /* SceneDelegate.swift */,
 				2D9D0BB825F4FD80004814AB /* LaunchScreen.storyboard */,
 			);
 			path = Application;
@@ -370,7 +367,6 @@
 				2D9D0C0A25F5055C004814AB /* InitialFeatureLauncher.swift in Sources */,
 				2D9D0C0125F5027A004814AB /* ExampleServiceProtocol.swift in Sources */,
 				2D9D0BF325F501D4004814AB /* InitialViewProtocol.swift in Sources */,
-				2D9D0BB025F4FD7F004814AB /* SceneDelegate.swift in Sources */,
 				2D9D0BF825F501D4004814AB /* InitialRouter.swift in Sources */,
 				2D9D0BF225F501D4004814AB /* InitialView.swift in Sources */,
 				2D9D0C0F25F5087B004814AB /* FeatureCoordinator.swift in Sources */,

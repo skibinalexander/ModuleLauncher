@@ -9,4 +9,8 @@ import Foundation
 
 protocol InitialViewProtocol: class {
     
+    /// Показать строку имён
+    /// - Parameter names: Строка с именами
+    func set(names: String)
+    
 }

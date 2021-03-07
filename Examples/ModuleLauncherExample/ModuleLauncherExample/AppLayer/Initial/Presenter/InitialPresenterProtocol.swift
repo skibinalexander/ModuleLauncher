@@ -12,7 +12,7 @@ protocol InitialPresenterFromViewProtocol: class {
 }
 
 protocol InitialPresenterFromInteractorProtocol: class {
-    
+    func didLoad(namesString: String)
 }
 
 typealias InitialPresenterProtocol = InitialPresenterFromViewProtocol & InitialPresenterFromInteractorProtocol

@@ -12,4 +12,10 @@ struct InitialFeatureLauncher: DependencyLauncherProtocol {
     
     var dependencies: [DependencyItemProtocol.Type]
     
+    static func new() -> InitialFeatureLauncher {
+        InitialFeatureLauncher(
+            dependencies: [ExampleServiceDependencyItem.self]
+        )
+    }
+    
 }

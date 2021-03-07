@@ -28,17 +28,26 @@
                                 <color key="textColor" name="Blue"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DKw-hg-fpw">
+                                <rect key="frame" x="16" y="438" width="382" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="D7C-ys-orw"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="DKw-hg-fpw" firstAttribute="centerX" secondItem="V63-d8-2h7" secondAttribute="centerX" id="0zF-Ca-66x"/>
                             <constraint firstItem="2oi-rY-v2P" firstAttribute="leading" secondItem="D7C-ys-orw" secondAttribute="leading" constant="16" id="28L-7v-ycJ"/>
                             <constraint firstItem="D7C-ys-orw" firstAttribute="trailing" secondItem="2oi-rY-v2P" secondAttribute="trailing" constant="16" id="5wl-fN-CYq"/>
+                            <constraint firstItem="DKw-hg-fpw" firstAttribute="centerY" secondItem="V63-d8-2h7" secondAttribute="centerY" id="Go1-y0-dGq"/>
+                            <constraint firstItem="DKw-hg-fpw" firstAttribute="leading" secondItem="D7C-ys-orw" secondAttribute="leading" constant="16" id="fJV-9P-ehf"/>
                             <constraint firstItem="2oi-rY-v2P" firstAttribute="centerY" secondItem="V63-d8-2h7" secondAttribute="centerY" id="pBC-7g-Adr"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="logoLabel" destination="2oi-rY-v2P" id="NSj-2n-cDg"/>
+                        <outlet property="label" destination="DKw-hg-fpw" id="laH-lQ-IeT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="De8-AH-A8o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
