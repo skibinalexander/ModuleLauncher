@@ -1,0 +1,6 @@
+framework module ModuleLauncher {
+  umbrella header "ModuleLauncher-umbrella.h"
+
+  export *
+  module * { export * }
+}
