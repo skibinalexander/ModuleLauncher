@@ -99,7 +99,6 @@
 			children = (
 				2D9D0BDE25F50177004814AB /* Application */,
 				2D9D0BDB25F50150004814AB /* Resources */,
-				2D9D0BC625F4FDEB004814AB /* FeatureLauncher */,
 				2D9D0BFB25F501E0004814AB /* ServiceLayer */,
 				2D9D0BDF25F501C5004814AB /* AppLayer */,
 			);
@@ -128,6 +127,7 @@
 		2D9D0BDE25F50177004814AB /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				2D9D0BC625F4FDEB004814AB /* FeatureLauncher */,
 				2D9D0BAD25F4FD7F004814AB /* AppDelegate.swift */,
 				2D9D0BB825F4FD80004814AB /* LaunchScreen.storyboard */,
 			);
