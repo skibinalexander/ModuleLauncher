@@ -18,4 +18,8 @@ struct InitialFeatureLauncher: DependencyLauncherProtocol {
         )
     }
     
+    func objectScope(for item: DependencyItemProtocol.Type) -> ObjectScope {
+        .container
+    }
+    
 }

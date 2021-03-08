@@ -22,6 +22,10 @@ public protocol DependencyItemProtocol: class {
     /// Собрать зависимость
     func inject()
     
+    // MARK: - Init
+    
+    init(container: Container, objectScope: ObjectScope)
+    
     // MARK: - Static
     
     /// Создать модель зависимости
@@ -32,5 +36,16 @@ public protocol DependencyItemProtocol: class {
         in container: Container,
         with scope: ObjectScope
     ) -> DependencyItemProtocol
+    
+}
+
+public extension DependencyItemProtocol {
+    
+    static func create(
+        in container: Container,
+        with scope: ObjectScope
+    ) -> DependencyItemProtocol {
+        return Self(container: container, objectScope: scope)
+    }
     
 }

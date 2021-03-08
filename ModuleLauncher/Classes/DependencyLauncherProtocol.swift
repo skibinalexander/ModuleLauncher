@@ -13,4 +13,12 @@ public protocol DependencyLauncherProtocol {
     /// Набор зависимостей
     var dependencies: [DependencyItemProtocol.Type] { get set }
     
+    /// Определение objectScope для зависимости
+    /// - Parameter item: Зависимость
+    func objectScope(for item: DependencyItemProtocol.Type) -> ObjectScope
+    
+}
+
+public extension DependencyLauncherProtocol {
+    func objectScope(for item: DependencyItemProtocol.Type) -> ObjectScope { .container }
 }

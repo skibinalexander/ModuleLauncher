@@ -13,7 +13,7 @@ struct FeatureDependeciesFactory: DependencyModuleFactoryProtocol {
     public func launch<AssemblyModule: ConfiguratorType>(
         configurator: AssemblyModule.Type,
         coordinator: ConfiguratorCoordinator,
-        with launcher: DependencyLauncherProtocol,
+        with launcher: DependencyLauncherProtocol?,
         in container: Container,
         preAssembly: ((Container) -> Void)?,
         postAssembly: ((Container) -> Void)?
@@ -23,8 +23,9 @@ struct FeatureDependeciesFactory: DependencyModuleFactoryProtocol {
         
         let view: UIViewController =
             buildFeatures(
+                launcher: launcher,
                 in: container,
-                with: launcher.dependencies
+                with: launcher?.dependencies ?? []
             )
             .configure(assembly: configurator)
         
@@ -43,6 +44,7 @@ struct FeatureDependeciesFactory: DependencyModuleFactoryProtocol {
     ///   - dependencies: Набор зависимостей
     /// - Returns: Контейнер с заполненными зависямости
     private func buildFeatures(
+        launcher: DependencyLauncherProtocol?,
         in container: Container,
         with dependencies: [DependencyItemProtocol.Type]
     ) -> Container {
@@ -50,7 +52,7 @@ struct FeatureDependeciesFactory: DependencyModuleFactoryProtocol {
         dependencies.forEach {
             $0.create(
                 in: container,
-                with: .container
+                with: launcher?.objectScope(for: $0) ?? .container
             )
             .inject()
         }

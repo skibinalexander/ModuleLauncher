@@ -19,7 +19,7 @@ class ExampleServiceDependencyItem: DependencyItemProtocol {
     
     // MARK: - Initialization
     
-    init(container: Container, objectScope: ObjectScope) {
+    required init(container: Container, objectScope: ObjectScope) {
         self.container = container
         self.objectScope = objectScope
     }
@@ -29,15 +29,6 @@ class ExampleServiceDependencyItem: DependencyItemProtocol {
         container.register(ExampleServiceProtocol.self) { _ in
             ExampleService()
         }
-    }
-    
-    // MARK: - Static
-    
-    static func create(in container: Container, with scope: ObjectScope) -> DependencyItemProtocol {
-        ExampleServiceDependencyItem(
-            container: container,
-            objectScope: scope
-        )
     }
     
 }
