@@ -75,6 +75,7 @@ public protocol ConfiguratorCoordinator {
 }
 
 public extension ConfiguratorCoordinator {
+    
     func push(
         presentView: UIViewController,
         on navigationView: UINavigationController?,
@@ -106,6 +107,7 @@ public extension ConfiguratorCoordinator {
     func present(custom: CoordinatorCustomPresentation) {}
 
     func dissmis(custom: CoordinatorCustomPresentation) {}
+    
 }
 
 // MARK: - Route Modules

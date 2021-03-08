@@ -16,7 +16,7 @@ public protocol DependencyModuleFactoryProtocol {
     func launch<AssemblyModule: ConfiguratorType>(
         configurator: AssemblyModule.Type,
         coordinator: ConfiguratorCoordinator,
-        with launcher: DependencyLauncherProtocol,
+        with launcher: DependencyLauncherProtocol?,
         in container: Container,
         preAssembly: ((Container) -> Void)?,
         postAssembly: ((Container) -> Void)?) -> (view: UIViewController, container: Container)

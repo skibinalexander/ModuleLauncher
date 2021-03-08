@@ -145,7 +145,7 @@
 		2D9D0BE025F501D4004814AB /* Initial */ = {
 			isa = PBXGroup;
 			children = (
-				2D9D0C0825F5052E004814AB /* FeatureLauncher */,
+				2D9D0C0925F5055C004814AB /* InitialFeatureLauncher.swift */,
 				2D9D0BE125F501D4004814AB /* Presenter */,
 				2D9D0BE425F501D4004814AB /* View */,
 				2D9D0BE825F501D4004814AB /* Configurator */,
@@ -215,14 +215,6 @@
 				2D9D0C0425F503EB004814AB /* ExampleServiceDependency.swift */,
 			);
 			path = DependencyItems;
-			sourceTree = "<group>";
-		};
-		2D9D0C0825F5052E004814AB /* FeatureLauncher */ = {
-			isa = PBXGroup;
-			children = (
-				2D9D0C0925F5055C004814AB /* InitialFeatureLauncher.swift */,
-			);
-			path = FeatureLauncher;
 			sourceTree = "<group>";
 		};
 		2D9D0C0D25F5086F004814AB /* Coordinator */ = {
