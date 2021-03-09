@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'ModuleLauncher'
-  s.version          = '0.5.0'
+  s.version          = '0.6.0'
   s.summary          = 'Abstraction of initialization modules with Swinject DI'
   s.description      = <<-DESC
 TODO: Add long description of the pod here.
