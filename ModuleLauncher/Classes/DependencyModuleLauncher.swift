@@ -22,3 +22,116 @@ public protocol DependencyModuleFactoryProtocol {
         postAssembly: ((Container) -> Void)?) -> (view: UIViewController, container: Container)
     
 }
+
+public protocol DependencyModuleFactoryInterceptor: class {
+    
+    /// Запуск фабрики interceptor пресборки
+    /// - Parameters:
+    ///   - factory: Фабрика зависимостей
+    ///   - container: Контейнер зависимостей
+    func launchPreAssembly(with factory: DependencyModuleFactoryProtocol, in container: Container)
+    
+    /// Запуск фабрики interceptor постсборки
+    /// - Parameters:
+    ///   - factory: Фабрика зависимостей
+    ///   - container: Контейнер зависимостей
+    func launchPostAssembly(with factory: DependencyModuleFactoryProtocol, in container: Container)
+    
+}
+
+/// Базовая реализации фабрики
+public struct DependencyModuleFactory: DependencyModuleFactoryProtocol {
+    
+    // MARK: - Static properties
+    
+    /// Статичный interceptor
+    public static weak var interceptor: DependencyModuleFactoryInterceptor?
+    
+    // MARK: - Public properties
+    
+    public weak var interceptor: DependencyModuleFactoryInterceptor?
+    
+    // MARK: - DependencyModuleFactoryProtocol
+    
+    public func launch<AssemblyModule: ConfiguratorType>(
+        configurator: AssemblyModule.Type,
+        coordinator: ConfiguratorCoordinator,
+        with launcher: DependencyLauncherProtocol?,
+        in container: Container,
+        preAssembly: ((Container) -> Void)?,
+        postAssembly: ((Container) -> Void)?
+    ) -> (view: UIViewController, container: Container) {
+        
+        /// Запуск работы статичного interceptor
+        Self.interceptor?
+            .launchPreAssembly(
+                with: self,
+                in: container
+            )
+        
+        /// Запуск работы  interceptor
+        self.interceptor?
+            .launchPreAssembly(
+                with: self,
+                in: container
+            )
+        
+        /// Callback пресборки в контейнер
+        preAssembly?(container)
+        
+        /// Сборка модуля
+        let view: UIViewController =
+            buildFeatures(
+                launcher: launcher,
+                in: container,
+                with: launcher?.dependencies ?? []
+            )
+            .configure(assembly: configurator)
+        
+        /// Callback постсборки в контейнер
+        postAssembly?(container)
+        
+        /// Запуск работы статичного interceptor
+        Self.interceptor?
+            .launchPostAssembly(
+                with: self,
+                in: container
+            )
+        
+        /// Запуск работы  interceptor
+        self.interceptor?
+            .launchPostAssembly(
+                with: self,
+                in: container
+            )
+        
+        return (view, container)
+        
+    }
+    
+    
+    // MARK: - Private Implementation
+    
+    /// Расширенная сборка контейнера под фичу
+    /// - Parameters:
+    ///   - container: Контейнер зависимостей
+    ///   - dependencies: Набор зависимостей
+    /// - Returns: Контейнер с заполненными зависямости
+    private func buildFeatures(
+        launcher: DependencyLauncherProtocol?,
+        in container: Container,
+        with dependencies: [DependencyItemProtocol.Type]
+    ) -> Container {
+        
+        dependencies.forEach {
+            $0.create(
+                in: container,
+                with: launcher?.objectScope(for: $0) ?? .container
+            )
+            .inject()
+        }
+        
+        return container
+    }
+    
+}
