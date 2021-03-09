@@ -51,6 +51,12 @@ public struct DependencyModuleFactory: DependencyModuleFactoryProtocol {
     
     public weak var interceptor: DependencyModuleFactoryInterceptor?
     
+    // MARK: - Initialization
+    
+    public init(interceptor: DependencyModuleFactoryInterceptor? = nil) {
+        self.interceptor = interceptor
+    }
+    
     // MARK: - DependencyModuleFactoryProtocol
     
     public func launch<AssemblyModule: ConfiguratorType>(

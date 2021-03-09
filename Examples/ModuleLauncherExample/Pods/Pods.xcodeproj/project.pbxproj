@@ -16,7 +16,7 @@
 		28CFE21A12A5C9D97690DA9B5E0E29E5 /* DependencyLauncherProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF68C61797E27A524AEF7B7D5C76E3FB /* DependencyLauncherProtocol.swift */; };
 		29737A0EEB004A6BBAF63CDD438C6E51 /* SpinLock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777549F8211BBDE23B5A316C906335B8 /* SpinLock.swift */; };
 		2A2C4C79F8A4D8E7A20F149C777A8E28 /* Assembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A4DAA76BE8F1E514D336388431C224 /* Assembly.swift */; };
-		36959F0F4D71B446E8C0A3740248E3CB /* DependencyModuleLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866D80A62384640F494053B8C11F1BA3 /* DependencyModuleLauncher.swift */; };
+		36959F0F4D71B446E8C0A3740248E3CB /* DependencyModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866D80A62384640F494053B8C11F1BA3 /* DependencyModuleFactory.swift */; };
 		3AB31FA8D2525708A700C70E9E48CE95 /* Swinject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAA8233E735A7258BBD93093E1AA5C7A /* Swinject.framework */; };
 		3AF69EBE9C2DE2E2C44EEBB080C3C64D /* Swinject-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB5C574FAFEAD16EC369BE76BC8B08B /* Swinject-dummy.m */; };
 		42EDAD07AFE23EF04DD50C10FFE6CB15 /* Resolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB94F2399462C48C014C9477075457F /* Resolver.swift */; };
@@ -81,7 +81,7 @@
 		2534A2332EC2928B34D1BF864B2BA341 /* Swinject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Swinject.h; path = Sources/Swinject.h; sourceTree = "<group>"; };
 		27386EB00847FDEEBC3AE45451C38DE0 /* Pods-ModuleLauncherExample.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ModuleLauncherExample.modulemap"; sourceTree = "<group>"; };
 		326F12E23C66E1CCCD220EAA5F8A2827 /* InstanceStorage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InstanceStorage.swift; path = Sources/InstanceStorage.swift; sourceTree = "<group>"; };
-		3969D5A468AC055D59D29E841DB28EA0 /* ModuleLauncher.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = ModuleLauncher.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		3969D5A468AC055D59D29E841DB28EA0 /* ModuleLauncher.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = ModuleLauncher.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		3BD3E46B08B43532597DFC9825A52BD4 /* ServiceEntry.TypeForwarding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServiceEntry.TypeForwarding.swift; path = Sources/ServiceEntry.TypeForwarding.swift; sourceTree = "<group>"; };
 		402B936132AB4F73CFAFD5BD6C04FB02 /* Container.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Container.swift; path = Sources/Container.swift; sourceTree = "<group>"; };
 		41AB5AA0A785CC5654B214425F506900 /* FunctionType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FunctionType.swift; path = Sources/FunctionType.swift; sourceTree = "<group>"; };
@@ -90,7 +90,7 @@
 		59AA54FDF1E0B576C4FCFDF8F1906E13 /* Swinject-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Swinject-prefix.pch"; sourceTree = "<group>"; };
 		5D6DEE0A697C133636D2B1B9E23B8603 /* SynchronizedResolver.Arguments.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SynchronizedResolver.Arguments.swift; path = Sources/SynchronizedResolver.Arguments.swift; sourceTree = "<group>"; };
 		67CE0D13666A05D5F49E9482957D6394 /* ModuleLauncher-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ModuleLauncher-umbrella.h"; sourceTree = "<group>"; };
-		700A2659DDCEC379CFC911ECC0675A15 /* ModuleLauncher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ModuleLauncher.framework; path = ModuleLauncher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		700A2659DDCEC379CFC911ECC0675A15 /* ModuleLauncher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ModuleLauncher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7124D08401047B5FA8B75EEC8063022B /* ModuleLauncher-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ModuleLauncher-Info.plist"; sourceTree = "<group>"; };
 		749F4AC3431688388EB876C11FE9034A /* UnavailableItems.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UnavailableItems.swift; path = Sources/UnavailableItems.swift; sourceTree = "<group>"; };
 		777549F8211BBDE23B5A316C906335B8 /* SpinLock.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpinLock.swift; path = Sources/SpinLock.swift; sourceTree = "<group>"; };
@@ -102,17 +102,17 @@
 		840FB9D3F46D160BD16B9096F75491B3 /* Pods-ModuleLauncherExample-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ModuleLauncherExample-acknowledgements.markdown"; sourceTree = "<group>"; };
 		84110A524FB66D87E75670267827BD8F /* ServiceKey.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServiceKey.swift; path = Sources/ServiceKey.swift; sourceTree = "<group>"; };
 		84681DE3288208AB5A0C2311AD388D8C /* Pods-ModuleLauncherExample-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ModuleLauncherExample-acknowledgements.plist"; sourceTree = "<group>"; };
-		866D80A62384640F494053B8C11F1BA3 /* DependencyModuleLauncher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DependencyModuleLauncher.swift; path = ModuleLauncher/Classes/DependencyModuleLauncher.swift; sourceTree = "<group>"; };
+		866D80A62384640F494053B8C11F1BA3 /* DependencyModuleFactory.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DependencyModuleFactory.swift; path = ModuleLauncher/Classes/DependencyModuleFactory.swift; sourceTree = "<group>"; };
 		86A4DAA76BE8F1E514D336388431C224 /* Assembly.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Assembly.swift; path = Sources/Assembly.swift; sourceTree = "<group>"; };
 		88833336CC4513CEBACEEC2B46AEE912 /* ModuleLauncher.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ModuleLauncher.release.xcconfig; sourceTree = "<group>"; };
 		88E0D3A61D95664661A595974DEB023F /* Assembler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Assembler.swift; path = Sources/Assembler.swift; sourceTree = "<group>"; };
 		89086DCE24A417EF0D48BDA68D333D8C /* Swinject-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Swinject-umbrella.h"; sourceTree = "<group>"; };
-		8ACA110EF3B35B3FCC08297B3799D9AD /* Swinject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Swinject.framework; path = Swinject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8ACA110EF3B35B3FCC08297B3799D9AD /* Swinject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Swinject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		93D61FDCC1A37DABC6532F8FB4CB8D43 /* InstanceWrapper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InstanceWrapper.swift; path = Sources/InstanceWrapper.swift; sourceTree = "<group>"; };
-		9877277AC27601C23A020FB7059EAD30 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		9877277AC27601C23A020FB7059EAD30 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		9AB5C574FAFEAD16EC369BE76BC8B08B /* Swinject-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Swinject-dummy.m"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9FF6BE3F3B664B36B13851FB3F3216E9 /* Pods_ModuleLauncherExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ModuleLauncherExample.framework; path = "Pods-ModuleLauncherExample.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9FF6BE3F3B664B36B13851FB3F3216E9 /* Pods_ModuleLauncherExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ModuleLauncherExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A09968FBC4A289F8035D7176D2DE0F24 /* Swinject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Swinject.release.xcconfig; sourceTree = "<group>"; };
 		A4F6234A51DF4F20BB2A343E78B22E17 /* Container.Logging.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Container.Logging.swift; path = Sources/Container.Logging.swift; sourceTree = "<group>"; };
 		AFA050F624BE659321EA42B90A781DC0 /* _Resolver.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = _Resolver.swift; path = Sources/_Resolver.swift; sourceTree = "<group>"; };
@@ -129,7 +129,7 @@
 		DAB5698E430A0A9CF5D471C3F9C0E954 /* Swinject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Swinject.debug.xcconfig; sourceTree = "<group>"; };
 		DF68C61797E27A524AEF7B7D5C76E3FB /* DependencyLauncherProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DependencyLauncherProtocol.swift; path = ModuleLauncher/Classes/DependencyLauncherProtocol.swift; sourceTree = "<group>"; };
 		E326F238FD4878FF2ED3B5F67DAF329E /* Swinject.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Swinject.modulemap; sourceTree = "<group>"; };
-		F4080E470B14E14768A32FF434B21DCD /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		F4080E470B14E14768A32FF434B21DCD /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		F8CC6FF975EFB71ED376A6F95DA603FC /* Pods-ModuleLauncherExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ModuleLauncherExample.debug.xcconfig"; sourceTree = "<group>"; };
 		FA62609A4B83BEE5CACF6B144B1245C6 /* ObjectScope.Standard.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ObjectScope.Standard.swift; path = Sources/ObjectScope.Standard.swift; sourceTree = "<group>"; };
 		FDCEFC080156681EB249566FA3C97DD1 /* Pods-ModuleLauncherExample-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ModuleLauncherExample-umbrella.h"; sourceTree = "<group>"; };
@@ -204,7 +204,7 @@
 				C8872D6E739D81FDC404CCC1D7E3A007 /* CommonSwinject.swift */,
 				D0C036D3DDAB5369923A21357B7C642C /* DependencyItemProtocol.swift */,
 				DF68C61797E27A524AEF7B7D5C76E3FB /* DependencyLauncherProtocol.swift */,
-				866D80A62384640F494053B8C11F1BA3 /* DependencyModuleLauncher.swift */,
+				866D80A62384640F494053B8C11F1BA3 /* DependencyModuleFactory.swift */,
 				79FA8A1C05BB6C674A43AB8B0D88E859 /* ModuleLauncher+Coordinator.swift */,
 				D3A7C7BA29B1C41ACAFE638F0304538C /* Pod */,
 				FCECC5EDDF8B4DA7B10B7238737BD54E /* Support Files */,
@@ -305,7 +305,6 @@
 				749F4AC3431688388EB876C11FE9034A /* UnavailableItems.swift */,
 				D3B2CFFC0F48C7B59840FDBA03AB7E24 /* Support Files */,
 			);
-			name = Swinject;
 			path = Swinject;
 			sourceTree = "<group>";
 		};
@@ -482,7 +481,7 @@
 				5EB825F9B93DA14D5C71AB0DA76F9F3C /* CommonSwinject.swift in Sources */,
 				BA2C22FAAE9DF41772904DC9AC08496D /* DependencyItemProtocol.swift in Sources */,
 				28CFE21A12A5C9D97690DA9B5E0E29E5 /* DependencyLauncherProtocol.swift in Sources */,
-				36959F0F4D71B446E8C0A3740248E3CB /* DependencyModuleLauncher.swift in Sources */,
+				36959F0F4D71B446E8C0A3740248E3CB /* DependencyModuleFactory.swift in Sources */,
 				A8C5371C5B5D41B454C2911B6254EB6C /* ModuleLauncher+Coordinator.swift in Sources */,
 				9FA1EE76DA65DB7FB08F1AA3D5C3DD17 /* ModuleLauncher-dummy.m in Sources */,
 			);

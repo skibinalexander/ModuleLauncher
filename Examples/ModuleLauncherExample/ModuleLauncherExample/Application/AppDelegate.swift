@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import ModuleLauncher
 import Swinject
 
 @main
@@ -28,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     private func installRootView() {
         
-        let launcher = FeatureDependeciesFactory()
+        let launcher = DependencyModuleFactory()
             .launch(
                 configurator: InitialConfigurator.self,
                 coordinator: FeatureCoordinator.shared,
