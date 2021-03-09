@@ -29,13 +29,23 @@ public protocol DependencyModuleFactoryInterceptor: class {
     /// - Parameters:
     ///   - factory: Фабрика зависимостей
     ///   - container: Контейнер зависимостей
-    func launchPreAssembly(with factory: DependencyModuleFactoryProtocol, in container: Container)
+    ///   - coordinator: Координатор для сборки модуля
+    func launchPreAssembly(
+        with factory: DependencyModuleFactoryProtocol,
+        in container: Container,
+        coordinator: ConfiguratorCoordinator
+    )
     
     /// Запуск фабрики interceptor постсборки
     /// - Parameters:
     ///   - factory: Фабрика зависимостей
     ///   - container: Контейнер зависимостей
-    func launchPostAssembly(with factory: DependencyModuleFactoryProtocol, in container: Container)
+    ///   - coordinator: Координатор для сборки модуля
+    func launchPostAssembly(
+        with factory: DependencyModuleFactoryProtocol,
+        in container: Container,
+        coordinator: ConfiguratorCoordinator
+    )
     
 }
 
@@ -72,14 +82,16 @@ public struct DependencyModuleFactory: DependencyModuleFactoryProtocol {
         Self.interceptor?
             .launchPreAssembly(
                 with: self,
-                in: container
+                in: container,
+                coordinator: coordinator
             )
         
         /// Запуск работы  interceptor
         self.interceptor?
             .launchPreAssembly(
                 with: self,
-                in: container
+                in: container,
+                coordinator: coordinator
             )
         
         /// Callback пресборки в контейнер
@@ -101,14 +113,16 @@ public struct DependencyModuleFactory: DependencyModuleFactoryProtocol {
         Self.interceptor?
             .launchPostAssembly(
                 with: self,
-                in: container
+                in: container,
+                coordinator: coordinator
             )
         
         /// Запуск работы  interceptor
         self.interceptor?
             .launchPostAssembly(
                 with: self,
-                in: container
+                in: container,
+                coordinator: coordinator
             )
         
         return (view, container)
