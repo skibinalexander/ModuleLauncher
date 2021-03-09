@@ -72,7 +72,7 @@ public struct DependencyModuleFactory: DependencyModuleFactoryProtocol {
     public func launch<AssemblyModule: ConfiguratorType>(
         configurator: AssemblyModule.Type,
         coordinator: ConfiguratorCoordinator,
-        with launcher: DependencyLauncherProtocol?,
+        with launcher: DependencyLauncherProtocol? = nil,
         in container: Container,
         preAssembly: ((Container) -> Void)?,
         postAssembly: ((Container) -> Void)?
