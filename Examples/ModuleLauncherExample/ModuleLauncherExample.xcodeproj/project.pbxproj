@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D31A5352603AC9900ECB681 /* ModuleLauncher.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 2D31A5342603AC9900ECB681 /* ModuleLauncher.podspec */; };
 		2D9D0BAE25F4FD7F004814AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9D0BAD25F4FD7F004814AB /* AppDelegate.swift */; };
 		2D9D0BB725F4FD80004814AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D9D0BB625F4FD80004814AB /* Assets.xcassets */; };
 		2D9D0BBA25F4FD80004814AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D9D0BB825F4FD80004814AB /* LaunchScreen.storyboard */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D31A5342603AC9900ECB681 /* ModuleLauncher.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ModuleLauncher.podspec; path = ../../ModuleLauncher.podspec; sourceTree = "<group>"; };
 		2D9D0BAA25F4FD7F004814AB /* ModuleLauncherExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ModuleLauncherExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D9D0BAD25F4FD7F004814AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2D9D0BB625F4FD80004814AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 		2D9D0BA125F4FD7F004814AB = {
 			isa = PBXGroup;
 			children = (
+				2D31A5342603AC9900ECB681 /* ModuleLauncher.podspec */,
 				2D9D0BAC25F4FD7F004814AB /* ModuleLauncherExample */,
 				2D9D0BAB25F4FD7F004814AB /* Products */,
 				5E9F18404E784FF39B8B3B1A /* Pods */,
@@ -292,6 +295,7 @@
 			files = (
 				2D9D0BBA25F4FD80004814AB /* LaunchScreen.storyboard in Resources */,
 				2D9D0BF425F501D4004814AB /* InitialView.storyboard in Resources */,
+				2D31A5352603AC9900ECB681 /* ModuleLauncher.podspec in Resources */,
 				2D9D0BB725F4FD80004814AB /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

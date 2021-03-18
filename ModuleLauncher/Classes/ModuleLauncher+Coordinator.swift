@@ -40,7 +40,8 @@ public protocol ConfiguratorCoordinator {
     ///   - view: Стек навигации
     func removeViewFromStack(
         at index: Int,
-        from navigationView: UINavigationController?)
+        from navigationView: UINavigationController?
+    )
     
     /// Удаление из стека по range
     /// - Parameters:
@@ -48,7 +49,8 @@ public protocol ConfiguratorCoordinator {
     ///   - view: Стек навигации
     func removeViewFromStack(
         with range: Range<Int>,
-        from navigationView: UINavigationController?)
+        from navigationView: UINavigationController?
+    )
     
     // MARK: - Modal Stack
     
@@ -57,10 +59,17 @@ public protocol ConfiguratorCoordinator {
     func present(
         view: UIViewController,
         on controller: UIViewController,
-        in container: Container)
+        in container: Container
+    )
     
     /// Скрыть модально показанный контроллер
-    func dissmis(view: UIViewController)
+    /// - Parameters:
+    ///   - view: View которое необходимо скрыть
+    ///   - container: Контейнер для работы координатора
+    func dissmis(
+        view: UIViewController,
+        in container: Container
+    )
     
     // MARK: - Custom
     
