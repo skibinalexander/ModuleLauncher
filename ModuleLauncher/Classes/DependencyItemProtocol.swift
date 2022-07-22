@@ -8,7 +8,7 @@
 import Swinject
 
 /// Интерфейс описывающий зависимость
-public protocol DependencyItemProtocol: class {
+public protocol DependencyItemProtocol: AnyObject {
     
     /// Идентификатор зависимости
     var dependencyId: String { get }

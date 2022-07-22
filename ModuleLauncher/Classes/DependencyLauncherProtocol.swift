@@ -10,7 +10,7 @@ import Swinject
 /// Обьект хранящий в себе настройки наполнения
 public protocol DependencyLauncherProtocol {
     
-    /// Набор зависимостей
+    /// List of dependenvies
     var dependencies: [DependencyItemProtocol.Type] { get set }
     
     /// Определение objectScope для зависимости

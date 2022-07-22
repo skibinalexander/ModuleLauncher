@@ -32,7 +32,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let launcher = DependencyModuleFactory()
             .launch(
                 configurator: InitialConfigurator.self,
-                coordinator: FeatureCoordinator.shared,
                 with: InitialFeatureLauncher.new(),
                 in: Container(),
                 preAssembly: nil,

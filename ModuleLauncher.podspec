@@ -1,10 +1,8 @@
 Pod::Spec.new do |s|
   s.name             = 'ModuleLauncher'
-  s.version          = '0.6.1'
+  s.version          = '1.0.0'
   s.summary          = 'Abstraction of initialization modules with Swinject DI'
-  s.description      = <<-DESC
-TODO: Add long description of the pod here.
-                       DESC
+  s.description      = 'Read of summary'
 
   s.homepage         = 'https://github.com/skibinalexander/ModuleLauncher.git'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }

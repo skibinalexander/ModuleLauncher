@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol InitialInteractorProtocol: class {
+protocol InitialInteractorProtocol: AnyObject {
     
     /// Запрос данных для инициализации
     func initialization()

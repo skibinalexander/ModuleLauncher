@@ -7,6 +7,7 @@
 //
 
 import Swinject
+import UIKit
 
 public typealias ConfiguratorType = (NSObject & Assembly & ConfiguratorView)
 
@@ -16,39 +17,33 @@ public protocol ConfiguratorView {
     /// Container assembly module
     var container: Container! { get set }
     
-    /// Coordinator for presentation
-    var coordinator: ConfiguratorCoordinator! { get }
-    
-    /// ViewController of Module
-    func getView() -> UIViewController
-    
-}
-
-extension ConfiguratorView {
-    
-    public var coordinator: ConfiguratorCoordinator! {
-        container.resolve(ConfiguratorCoordinator.self)
-    }
+    /// View for presentation
+    var view: UIViewController { get }
     
 }
 
 extension Container {
     
+    /// Void configuration module
     public func configure<Configurator>(assembly: Configurator.Type) where Configurator: ConfiguratorType {
         let configurator = Configurator()
         configurator.assemble(container: self)
     }
     
+    /// Resolve configuration module
+    /// - Returns: Configurator by ConfiguratorType
     public func configure<Configurator>(assembly: Configurator.Type) -> Configurator where Configurator: ConfiguratorType {
         let configurator = Configurator()
         configurator.assemble(container: self)
         return configurator
     }
     
+    /// Resolve configuration module
+    /// - Returns: Configurator by UIViewController
     public func configure<Configurator>(assembly: Configurator.Type) -> UIViewController where Configurator: ConfiguratorType {
         let configurator = Configurator()
         configurator.assemble(container: self)
-        return configurator.getView()
+        return configurator.view
     }
     
 }

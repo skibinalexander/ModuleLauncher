@@ -36,7 +36,6 @@
 		9FA1EE76DA65DB7FB08F1AA3D5C3DD17 /* ModuleLauncher-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B48D0B2AF284C830DA66F006033970 /* ModuleLauncher-dummy.m */; };
 		A74575F736F43EC070DC3714E274C9C9 /* Pods-ModuleLauncherExample-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CBDDA4A4D489452FF87FD43769A1BACD /* Pods-ModuleLauncherExample-dummy.m */; };
 		A7C60B2D7E99FEFEB35650ADF0074AB3 /* ObjectScope.Standard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA62609A4B83BEE5CACF6B144B1245C6 /* ObjectScope.Standard.swift */; };
-		A8C5371C5B5D41B454C2911B6254EB6C /* ModuleLauncher+Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FA8A1C05BB6C674A43AB8B0D88E859 /* ModuleLauncher+Coordinator.swift */; };
 		B550FEA558D255C9FA9C8F81D480B25B /* Swinject-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 89086DCE24A417EF0D48BDA68D333D8C /* Swinject-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BA2C22FAAE9DF41772904DC9AC08496D /* DependencyItemProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C036D3DDAB5369923A21357B7C642C /* DependencyItemProtocol.swift */; };
 		BDD7AE9A2FA5BA3152F8DE3FAAF0212C /* ServiceEntry.TypeForwarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD3E46B08B43532597DFC9825A52BD4 /* ServiceEntry.TypeForwarding.swift */; };
@@ -96,7 +95,6 @@
 		777549F8211BBDE23B5A316C906335B8 /* SpinLock.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpinLock.swift; path = Sources/SpinLock.swift; sourceTree = "<group>"; };
 		77EE97B7B2F80A849EE0FBBA25031129 /* GraphIdentifier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GraphIdentifier.swift; path = Sources/GraphIdentifier.swift; sourceTree = "<group>"; };
 		7839305382480F1B6E6C6F87CA605F93 /* Pods-ModuleLauncherExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ModuleLauncherExample.release.xcconfig"; sourceTree = "<group>"; };
-		79FA8A1C05BB6C674A43AB8B0D88E859 /* ModuleLauncher+Coordinator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ModuleLauncher+Coordinator.swift"; path = "ModuleLauncher/Classes/ModuleLauncher+Coordinator.swift"; sourceTree = "<group>"; };
 		7AB94F2399462C48C014C9477075457F /* Resolver.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Resolver.swift; path = Sources/Resolver.swift; sourceTree = "<group>"; };
 		82A284942E8E0DC38C77F70F6F8A2F5A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		840FB9D3F46D160BD16B9096F75491B3 /* Pods-ModuleLauncherExample-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ModuleLauncherExample-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -205,7 +203,6 @@
 				D0C036D3DDAB5369923A21357B7C642C /* DependencyItemProtocol.swift */,
 				DF68C61797E27A524AEF7B7D5C76E3FB /* DependencyLauncherProtocol.swift */,
 				866D80A62384640F494053B8C11F1BA3 /* DependencyModuleFactory.swift */,
-				79FA8A1C05BB6C674A43AB8B0D88E859 /* ModuleLauncher+Coordinator.swift */,
 				D3A7C7BA29B1C41ACAFE638F0304538C /* Pod */,
 				FCECC5EDDF8B4DA7B10B7238737BD54E /* Support Files */,
 			);
@@ -427,7 +424,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1100;
+				LastUpgradeCheck = 1320;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 10.0";
@@ -482,7 +479,6 @@
 				BA2C22FAAE9DF41772904DC9AC08496D /* DependencyItemProtocol.swift in Sources */,
 				28CFE21A12A5C9D97690DA9B5E0E29E5 /* DependencyLauncherProtocol.swift in Sources */,
 				36959F0F4D71B446E8C0A3740248E3CB /* DependencyModuleFactory.swift in Sources */,
-				A8C5371C5B5D41B454C2911B6254EB6C /* ModuleLauncher+Coordinator.swift in Sources */,
 				9FA1EE76DA65DB7FB08F1AA3D5C3DD17 /* ModuleLauncher-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -631,7 +627,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Swinject/Swinject-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Swinject/Swinject-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -705,7 +701,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/ModuleLauncher/ModuleLauncher-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/ModuleLauncher/ModuleLauncher-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -839,7 +835,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/ModuleLauncher/ModuleLauncher-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/ModuleLauncher/ModuleLauncher-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -874,7 +870,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Swinject/Swinject-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Swinject/Swinject-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

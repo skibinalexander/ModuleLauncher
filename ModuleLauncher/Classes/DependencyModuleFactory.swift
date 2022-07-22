@@ -9,21 +9,23 @@
 import Swinject
 import UIKit
 
+///
+public typealias LaunchModule = (view: UIViewController, container: Container)
+
 /// Фабрика наполнения модуля
 public protocol DependencyModuleFactoryProtocol {
     
     /// Сборка модуля и inject зависимостей в контейнере
     func launch<AssemblyModule: ConfiguratorType>(
         configurator: AssemblyModule.Type,
-        coordinator: ConfiguratorCoordinator,
         with launcher: DependencyLauncherProtocol?,
         in container: Container,
         preAssembly: ((Container) -> Void)?,
-        postAssembly: ((Container) -> Void)?) -> (view: UIViewController, container: Container)
+        postAssembly: ((Container) -> Void)?) -> LaunchModule
     
 }
 
-public protocol DependencyModuleFactoryInterceptor: class {
+public protocol DependencyModuleFactoryInterceptor: AnyObject {
     
     /// Запуск фабрики interceptor пресборки
     /// - Parameters:
@@ -32,8 +34,7 @@ public protocol DependencyModuleFactoryInterceptor: class {
     ///   - coordinator: Координатор для сборки модуля
     func launchPreAssembly(
         with factory: DependencyModuleFactoryProtocol,
-        in container: Container,
-        coordinator: ConfiguratorCoordinator
+        in container: Container
     )
     
     /// Запуск фабрики interceptor постсборки
@@ -43,8 +44,7 @@ public protocol DependencyModuleFactoryInterceptor: class {
     ///   - coordinator: Координатор для сборки модуля
     func launchPostAssembly(
         with factory: DependencyModuleFactoryProtocol,
-        in container: Container,
-        coordinator: ConfiguratorCoordinator
+        in container: Container
     )
     
 }
@@ -55,44 +55,33 @@ public struct DependencyModuleFactory: DependencyModuleFactoryProtocol {
     // MARK: - Static properties
     
     /// Статичный interceptor
-    public static weak var interceptor: DependencyModuleFactoryInterceptor?
+    public static weak var staticInterceptor: DependencyModuleFactoryInterceptor?
     
     // MARK: - Public properties
     
-    public weak var interceptor: DependencyModuleFactoryInterceptor?
+    public weak var localInterceptor: DependencyModuleFactoryInterceptor?
     
     // MARK: - Initialization
     
-    public init(interceptor: DependencyModuleFactoryInterceptor? = nil) {
-        self.interceptor = interceptor
+    public init(localInterceptor: DependencyModuleFactoryInterceptor? = nil) {
+        self.localInterceptor = localInterceptor
     }
     
     // MARK: - DependencyModuleFactoryProtocol
     
     public func launch<AssemblyModule: ConfiguratorType>(
         configurator: AssemblyModule.Type,
-        coordinator: ConfiguratorCoordinator,
         with launcher: DependencyLauncherProtocol? = nil,
         in container: Container,
         preAssembly: ((Container) -> Void)?,
         postAssembly: ((Container) -> Void)?
-    ) -> (view: UIViewController, container: Container) {
+    ) -> LaunchModule {
         
         /// Запуск работы статичного interceptor
-        Self.interceptor?
-            .launchPreAssembly(
-                with: self,
-                in: container,
-                coordinator: coordinator
-            )
+        Self.staticInterceptor?.launchPreAssembly(with: self, in: container)
         
         /// Запуск работы  interceptor
-        self.interceptor?
-            .launchPreAssembly(
-                with: self,
-                in: container,
-                coordinator: coordinator
-            )
+        self.localInterceptor?.launchPreAssembly(with: self, in: container)
         
         /// Callback пресборки в контейнер
         preAssembly?(container)
@@ -110,20 +99,10 @@ public struct DependencyModuleFactory: DependencyModuleFactoryProtocol {
         postAssembly?(container)
         
         /// Запуск работы статичного interceptor
-        Self.interceptor?
-            .launchPostAssembly(
-                with: self,
-                in: container,
-                coordinator: coordinator
-            )
+        Self.staticInterceptor?.launchPostAssembly(with: self, in: container)
         
         /// Запуск работы  interceptor
-        self.interceptor?
-            .launchPostAssembly(
-                with: self,
-                in: container,
-                coordinator: coordinator
-            )
+        self.localInterceptor?.launchPostAssembly(with: self, in: container)
         
         return (view, container)
         
@@ -142,13 +121,8 @@ public struct DependencyModuleFactory: DependencyModuleFactoryProtocol {
         in container: Container,
         with dependencies: [DependencyItemProtocol.Type]
     ) -> Container {
-        
         dependencies.forEach {
-            $0.create(
-                in: container,
-                with: launcher?.objectScope(for: $0) ?? .container
-            )
-            .inject()
+            $0.init(container: container, objectScope: launcher?.objectScope(for: $0) ?? .container).inject()
         }
         
         return container

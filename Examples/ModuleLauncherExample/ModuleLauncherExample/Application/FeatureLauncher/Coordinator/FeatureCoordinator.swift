@@ -8,7 +8,7 @@
 import ModuleLauncher
 import Swinject
 
-class FeatureCoordinator: ConfiguratorCoordinator {
+class FeatureCoordinator {
     
     static let shared: FeatureCoordinator = FeatureCoordinator()
     

@@ -7,11 +7,11 @@
 //
 import Foundation
 
-protocol InitialPresenterFromViewProtocol: class {
+protocol InitialPresenterFromViewProtocol: AnyObject {
     func viewDidLoad()
 }
 
-protocol InitialPresenterFromInteractorProtocol: class {
+protocol InitialPresenterFromInteractorProtocol: AnyObject {
     func didLoad(namesString: String)
 }
 

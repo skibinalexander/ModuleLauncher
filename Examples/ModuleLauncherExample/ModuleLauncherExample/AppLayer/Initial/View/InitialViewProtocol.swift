@@ -7,7 +7,7 @@
 //
 import Foundation
 
-protocol InitialViewProtocol: class {
+protocol InitialViewProtocol: AnyObject {
     
     /// Показать строку имён
     /// - Parameter names: Строка с именами

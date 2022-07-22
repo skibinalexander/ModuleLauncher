@@ -76,7 +76,7 @@ final class InitialConfigurator: NSObject, Assembly {
 
 extension InitialConfigurator: ConfiguratorView {
     
-    func getView() -> UIViewController {
+    var view: UIViewController {
         container.resolveAsViewController(InitialViewProtocol.self)
     }
     

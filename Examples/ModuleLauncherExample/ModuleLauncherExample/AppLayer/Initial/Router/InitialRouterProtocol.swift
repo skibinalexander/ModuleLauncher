@@ -8,4 +8,4 @@
 
 import Foundation
 
-protocol InitialRouterProtocol: class {}
+protocol InitialRouterProtocol: AnyObject {}
